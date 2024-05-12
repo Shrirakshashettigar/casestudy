@@ -1,11 +1,11 @@
-// Online C compiler to run C program online
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 #define NUM_ITEMS 8
 
-// Define grocery item names and prices
+
 const char* GroceryItemNames[NUM_ITEMS] = {
     "Rice", "Pasta", "Milk", "Eggs", "Bread",
     "Cheese", "Chicken", "Fish"
@@ -13,20 +13,20 @@ const char* GroceryItemNames[NUM_ITEMS] = {
 
 float itemPrices[NUM_ITEMS] = {60.0, 45.5, 25.75, 20.25, 30.0, 55.0, 150.0, 40.0};
 
-// Structure to hold customer details
+
 struct Customer {
     char name[50];
     char address[100];
     char phone[15];
 };
 
-// Structure to hold login information
+
 struct LoginInfo {
     char username[20];
     char password[20];
 };
 
-// Function to display menu
+
 void displayMenu() {
     printf("Welcome to the grocery store!\nMenu:\n");
     for (int i = 0; i < NUM_ITEMS; ++i) {
@@ -34,7 +34,7 @@ void displayMenu() {
     }
 }
 
-// Function to get customer details
+
 void getCustomerDetails(struct Customer *customer) {
     printf("Enter your name: ");
     scanf("%s", customer->name);
@@ -52,7 +52,7 @@ void getCustomerDetails(struct Customer *customer) {
     }
 }
 
-// Function to match item name
+
 int matchItemName(const char *itemName) {
     for (int i = 0; i < NUM_ITEMS; ++i) {
         if (strcmp(itemName, GroceryItemNames[i]) == 0) {
@@ -62,7 +62,7 @@ int matchItemName(const char *itemName) {
     return -1; // Item not found
 }
 
-// Function to perform login
+
 int login(struct LoginInfo *loginInfo) {
     char username[20], password[20];
     printf("Username: ");
