@@ -1,4 +1,4 @@
-// Structure to hold login information
+
 struct LoginInfo {
     char username[20];
     char password[20];
